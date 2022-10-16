@@ -37,9 +37,9 @@ class CustomAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) = with(holder.itemBinding) {
         val item = getItem(position)
+        holder.itemBinding.exampleData = item
         item.apply {
             imageView.loadImage(downloadUrl)
-            textViewTitle.text = author
         }
 
         root.setOnClickListener {
